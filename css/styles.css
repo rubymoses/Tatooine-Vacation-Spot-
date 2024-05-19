@@ -1,64 +1,102 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #fffdd0; /* light yellow background */
-    color: #000; /* black text */
     margin: 0;
     padding: 0;
+    background-color: #f0e68c;
 }
 
-header, footer {
-    background: linear-gradient(to right, #ffd700, #ff4500); /* gradient background */
-    color: #000;
-    text-align: center;
+header {
+    background: linear-gradient(to right, #ffa500, #ff4500);
+    color: white;
     padding: 10px 0;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-weight: bold;
+    font-size: 2.5em;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    color: #000;
 }
 
 main {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    margin: 20px;
 }
 
 section {
-    width: 70%;
+    flex: 3;
+    margin-right: 20px;
 }
 
 aside {
-    width: 25%;
-    padding: 10px;
-    background-color: #f5f5dc; /* light beige background */
+    flex: 1;
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.float-img {
-    float: right;
-    margin: 0 0 10px 10px;
-    border: 2px solid #000;
+section img.float-img {
+    float: left;
+    margin: 0 15px 15px 0;
+    border: 5px solid #ccc;
+    border-radius: 10px;
 }
 
-footer p {
-    margin: 0;
-    font-weight: bold;
+footer {
+    background: linear-gradient(to right, #ff4500, #ffa500);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #ff4500;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ffa500;
+}
+
+p {
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        margin-right: 0;
+    }
+
+    aside {
+        margin-top: 20px;
+    }
 }
